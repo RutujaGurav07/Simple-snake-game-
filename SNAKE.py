@@ -1,4 +1,3 @@
-# https://www.edureka.co/blog/snake-game-with-pygame/#install
 import pygame
 import time
 import random
@@ -8,7 +7,7 @@ pygame.init()
 white = (255, 255, 255)
 black = (0, 0, 0)
 red = (255, 0, 0)
-blue = (181, 175, 238)
+blue = (177, 229, 238)
 yellow = (138, 50, 111)
 green = (4,156,72)
 
@@ -19,8 +18,6 @@ dis = pygame.display.set_mode((dis_width, dis_height))
 pygame.display.set_caption('Snake Game')
  
 clock =pygame.time.Clock()
-
-# game_over = False
 
 snake_block=10
 snake_speed=15
@@ -94,7 +91,7 @@ def gameLoop():
                     x1_change = 0
     
         if x1 >= dis_width or x1 < 0 or y1 >= dis_height or y1 < 0:
-            game_over = True
+            game_close = True
         x1 += x1_change
         y1 += y1_change
 
@@ -123,14 +120,8 @@ def gameLoop():
           
         clock.tick(snake_speed)
         
-    # pygame.quit()
-    # quit()
-
 
 gameLoop()
 
-# message("You lost",red)
-# pygame.display.update()
-# time.sleep(2)
- 
+
 
